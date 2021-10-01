@@ -2,9 +2,8 @@ from os import sched_getscheduler, wait
 import time
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
-import email_send
-from Student import Student
-from Database import Database
+from classes.Student import Student
+from classes.Database import Database
 
 PAGENUMBER=5
 options = Options()
@@ -34,12 +33,12 @@ for page in range(1,PAGENUMBER+1):
     print("page {} completed .".format(page))
 
 
-""" Login
+""" Login to talents
 login_username=driver.find_element_by_id("id_username")
-login_username.send_keys("jm_boukerfa@esi.dz")
+login_username.send_keys("your email goes here")
 
 login_username=driver.find_element_by_id("id_password")
-login_username.send_keys("CoolerMaster21")
+login_username.send_keys("your password goes here")
 
 login_button=driver.find_element_by_class_name("btn-primary")
 login_button.click()
